@@ -12,5 +12,5 @@ con, cliente = serv_sock.accept()
 # Conectado e aguardando mensagem
 recebe = con.recv(1024)
 # Recebe mensagem
-print(f'Mensagem recebida: {recebe}')
+print(f'Mensagem recebida: {recebe.decode()}')
 serv_sock.close()
