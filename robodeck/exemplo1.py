@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 from socket import *
 from toolbox import *
 
@@ -8,12 +8,12 @@ port = 2000
 # 255.255.255.0
 
 p_id = 1
-pid = np.uint8(p_id)
-ref = np.uint8(0)
-src = [np.uint8(1), np.uint8(68)]
-dst = [np.uint8(50), np.uint8(174)]
-sid = [np.uint8(0), np.uint8(0)]
-act = np.uint8(1)
+pid = chr(p_id)
+ref = chr(0)
+src = [chr(1), chr(68)]
+dst = [chr(50), chr(174)]
+sid = [chr(0), chr(0)]
+act = chr(1)
 cmd, tam = session_open('Eu')
 pac = gera_pacote(pid, ref, src, dst, sid, act, tam, cmd)
 print(pac)
